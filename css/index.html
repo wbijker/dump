@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <div class="text-base">General guidelines</div>
+    <ul class="list-disc mx-8">
+        <li>Your design should always be flowable. </li>
+        <li>Don't use absolute positioning too much. I would say avoid them as all cost, but there are some legitmate
+            cases</li>
+        <li>Avoid explicitness on non-layout elements. Rather let the children determine their size</li>
+        <li>Use rem/em rather then pixels for padding, margins and font size. Let your page be in relation to your font
+            size.</li>
+    </ul>
+
+    <div class="text-xl">Vertical centering</div>
+    <div class="text-sm">For explicit heights use absolute position with half negative margin</div>
+    <div class="text-sm">For unkown heigts use translateY(-50%)</div>
+
+    <div class="mx-4">
+
+        <div class="text-lg">Flexbox items center</div>
+        <div class="h-24 bg-pink-200 inline-block">
+            <div class="flex h-full flex-row items-center">
+                <div class="bg-blue-200">A</div>
+            </div>
+        </div>
+
+        <div class="text-lg">Ghost element</div>
+        <div class="h-24 bg-pink-200 inline-block whitespace-no-wrap">
+            <div class="h-full inline-block align-middle bg-blue-200">&nbsp</div>
+            <div class="inline-block align-middle bg-green-200">A</div>
+            <div class="text-xs">Same rules as inline-blocks stacks.<br />Negative word spacing and no-wrap</div>
+        </div>
+
+        <div class="text-lg">Table cell</div>
+        <div class="table h-24 bg-pink-200 w-ful">
+            <div class="table-cell h-full align-middle bg-blue-200">A</div>
+        </div>
+
+        <div class="text-lg">Flexbox y margin</div>
+        <div class="h-24 bg-pink-200 inline-block">
+            <div class="flex h-full">
+                <div class="bg-blue-200 my-auto">A</div>
+            </div>
+        </div>
+
+        <div class="text-lg">Flexbox cross axis center</div>
+        <div class="h-24 bg-pink-200 inline-block">
+            <div class="flex h-full justify-center flex-col">
+                <div class="bg-blue-200">A</div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="text-xl">Header layout</div>
+    <div class="mx-4">
+
+        <div class="text-lg">Flexbox</div>
+        <div class="w-full flex justify-between bg-pink-200">
+            <div class="bg-blue-200">A</div>
+            <div class="bg-green-200">B</div>
+        </div>
+
+        <div class="text-lg">Floats</div>
+
+        <div class="w-full bg-pink-200">
+            <div class="float-left bg-blue-200">A</div>
+            <div class="float-right bg-green-200">B</div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="text-xs">Floats must be cleared</div>
+
+        <div class="text-lg">Old fashioned table</div>
+
+        <div class="table w-full bg-pink-200">
+            <div class="w-1/2 table-cell text-left">
+                <div class="inline-block bg-blue-200">A</div>
+            </div>
+            <div class="w-1/2 table-cell text-right">
+                <div class="inline-block bg-green-200">B</div>
+            </div>
+        </div>
+
+        <div class="text-lg">Inline block</div>
+        <div class="w-full bg-pink-200 overflow-scroll whitespace-no-wrap">
+            <div class="inline-block w-1/2">
+                <div class="inline-block bg-blue-200">A</div>
+            </div>
+            <div class="inline-block w-1/2 text-right">
+                <div class="inline-block bg-green-200">B</div>
+            </div>
+        </div>
+        <div class="text-xs">Must remove whitespace between elements or add a negative word spacing</div>
+
+        <div class="text-lg">Absolute positioning</div>
+
+        <div class="w-full bg-pink-200 relative">
+            <div class="absolute left-0 top-0 bg-blue-200">A</div>
+            <div class="absolute right-0 top-0 bg-green-200">B</div>
+
+            <span>&nbsp;</span>
+        </div>
+
+    </div>
+
+
+    <div class="text-xl">Horizontal centering</div>
+    <div class="mx-4">
+
+        <div class="text-lg">Flexbox justify center</div>
+        <div class="w-full bg-pink-200 flex justify-center">
+            <div class="bg-blue-200">A</div>
+        </div>
+
+
+        <div class="text-lg">Flexbox around</div>
+        <div class="w-full bg-pink-200 flex justify-around">
+            <div class="bg-blue-200 inline-block">A</div>
+        </div>
+
+        <div class="text-lg">Flexbox margin</div>
+        <div class="w-full bg-pink-200 flex">
+            <div class="bg-blue-200 inline-block mx-auto">A</div>
+        </div>
+
+
+        <div class="text-lg">Margin auto</div>
+        <div class="w-auto bg-pink-200">
+            <div class="w-8 mx-auto bg-blue-200">A</div>
+        </div>
+        <div class="text-xs">Must defined a width</div>
+
+        <div class="text-lg">Text align inline-block</div>
+        <div class="w-full bg-pink-200 text-center">
+            <div class="inline-block bg-blue-200">A</div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
